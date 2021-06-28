@@ -1,0 +1,62 @@
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding-top: 75px;
+  font-size: 24px;
+  font-family: "Proxima Nova", Open Sans, sans-serif;
+  z-index: 1000;
+
+  .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-top: 1rem;
+    padding-right: 1rem;
+    font-size: 36px;
+  }
+
+  .link {
+    position: relative;
+    text-decoration: none;
+    display: block;
+    color: white;
+
+    .link-icon {
+      font-size: 1rem;
+      left: 16px;
+      top: calc(50% - 9px);
+      color: white;
+      padding-right: 1rem;
+    }
+
+    .link-text {
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 1;
+      padding: 1rem 0 1rem 1rem;
+      text-transform: uppercase;
+      width: 100%;
+      display: block;
+      color: white;
+    }
+
+    .search {
+      border-radius: 0;
+      border: 0 none;
+      margin: 0;
+
+      &:focus {
+        outline: none;
+      }
+
+      ~ .link-icon {
+        color: black;
+      }
+    }
+  }
+}

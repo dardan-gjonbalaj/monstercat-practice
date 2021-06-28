@@ -1,0 +1,156 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0.5rem;
+  max-width: 100%;
+}
+.header__logo {
+  height: 40px;
+  padding-left: 10px;
+}
+.header__left {
+  margin-right: auto;
+}
+.header__right {
+  display: flex;
+}
+.links {
+  display: flex;
+  flex: 2 2 auto;
+}
+.links ul {
+  display: block;
+  padding: 0 1em;
+  text-transform: uppercase;
+  font-family: "Proxima Nova", Open Sans, sans-serif;
+}
+.links ul li {
+  display: inline;
+  padding: 0 0.65rem;
+  font-weight: 700;
+  font-size: 18px;
+}
+.links ul li:hover {
+  padding-top: 0.25em;
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
+.header__logo-wrapper,
+.header__logo-wrapper__button,
+.header__hamburger {
+  display: none;
+}
+
+.player-container {
+  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 300;
+  justify-content: space-between;
+  background-color: hsl(220, 13%, 18%);
+  align-items: center;
+  height: 50px;
+  .player-links {
+    flex-direction: row;
+    ul {
+      color: white;
+      display: flex;
+      flex-direction: row;
+      li {
+        padding: 0 2rem;
+      }
+    }
+  }
+  .player {
+    display: flex;
+    margin: 0 1.5rem;
+    .player-buttons {
+      display: flex;
+      p {
+        color: white;
+        align-items: center;
+        padding-top: 0.25rem;
+      }
+      & button {
+        height: 30px;
+        padding: 0 1rem;
+        margin: 0 0.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .header {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0.5rem;
+  }
+  .header__left {
+    margin-right: auto;
+  }
+  .links {
+    display: none;
+  }
+  .header__right {
+    display: flex;
+    margin-right: 0.5em;
+  }
+
+  .header__logo {
+    height: 40px;
+  }
+
+  .header__logo-wrapper {
+    height: 36px;
+    width: 36px;
+    display: flex;
+    align-items: center;
+  }
+
+  .header__logo-wrapper__button {
+    height: 20px;
+    width: 24px;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  .header__hamburger {
+    background-color: transparent;
+    border: none;
+    height: 36px;
+    width: 36px;
+    padding: 0;
+    display: block;
+  }
+
+  .header__hamburger__wrapper {
+    height: 20px;
+    width: 24px;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  .header__hamburger__line {
+    background-color: #000000;
+    display: block;
+    height: 3px;
+    left: 0;
+    position: absolute;
+    right: 0;
+  }
+
+  .header__hamburger__line--one {
+    top: 0;
+  }
+  .header__hamburger__line--two {
+    top: calc(50% - 1.5px);
+  }
+  .header__hamburger__line--three {
+    bottom: 0;
+  }
+  .player-container {
+    display: none;
+  }
+}
